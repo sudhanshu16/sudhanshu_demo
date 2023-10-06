@@ -1,10 +1,10 @@
 custom:
-  # basic-cluster-props: &basic-cluster-props
-  #   spark_version: "12.2.x-scala2.12"
-  #   node_type_id: "Standard_F8"
-  #   spark_conf:
-  #     spark.databricks.delta.preview.enabled: 'true'
-  #   runtime_engine: STANDARD
+  basic-cluster-props: &basic-cluster-props
+    spark_version: "12.2.x-scala2.12"
+    node_type_id: "Standard_F8"
+    spark_conf:
+      spark.databricks.delta.preview.enabled: 'true'
+    runtime_engine: STANDARD
 
   basic-auto-scale-props: &basic-auto-scale-props
     autoscale:

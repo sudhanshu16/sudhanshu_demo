@@ -12,10 +12,10 @@ custom:
       max_workers: 8
 
   basic-autoscale-cluster: &basic-autoscale-cluster
-    # new_cluster:
-    #   <<: # merge these two maps and place them here.
-    #     - *basic-cluster-props
-    #     - *basic-auto-scale-props
+    new_cluster:
+      <<: # merge these two maps and place them here.
+        - *basic-cluster-props
+        - *basic-auto-scale-props
 
 environments:
   default:
@@ -38,6 +38,6 @@ environments:
             job_cluster_key: "demo_job_key"
             notebook_task:
               notebook_path: "/Repos/l061371-ca@llynet.com/sudhanshu_demo/ci-cd/Print_Hello"    
-              base_parameters:
-                run_id: "{{parent_run_id}}"
-                log_event: "start"  
+              # base_parameters:
+              #   run_id: "{{parent_run_id}}"
+              #   log_event: "start"  
